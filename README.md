@@ -6,12 +6,14 @@
     - ceny
     - dostępność
     - zdjecia
-    - zasieg kmWypożycznie
-        - miejsce wypożyczenia
-        - czas wypożyczenia
-        - miejsce oddania
-        - klient
-        - auto- wybor pojedynczego
+    - zasieg km
+    - 
+Wypożycznie
+  - miejsce wypożyczenia
+  - czas wypożyczenia
+   - miejsce oddania
+         - klient
+         - auto- wybor pojedynczego
 - kontakt do firmy
 - warunki prawne
 - filtrowanie po właściwościach
