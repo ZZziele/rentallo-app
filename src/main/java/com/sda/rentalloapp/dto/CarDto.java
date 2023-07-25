@@ -1,5 +1,4 @@
-package com.sda.rentalloapp.dtdo;
-
+package com.sda.rentalloapp.dto;
 import com.sda.rentalloapp.domain.enumeration.BodyType;
 import com.sda.rentalloapp.domain.enumeration.EngineType;
 import com.sda.rentalloapp.domain.enumeration.FuelType;
@@ -16,6 +15,7 @@ public record CarDto(
         String bodySerialNumber,
         int pricePerDayInPolishGrosz,
         boolean available,
-        int rangeInKm
+        int rangeInKm,
+        PicturesDto pictures
 ) {
 }
