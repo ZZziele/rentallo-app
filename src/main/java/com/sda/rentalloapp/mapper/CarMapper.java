@@ -1,14 +1,15 @@
 package com.sda.rentalloapp.mapper;
-
 import com.sda.rentalloapp.domain.Car;
-import com.sda.rentalloapp.domain.Pictures;
+
 import com.sda.rentalloapp.dto.CarDto;
-import com.sda.rentalloapp.dto.PicturesDto;
+
 import org.springframework.stereotype.Component;
-
 @Component
-
 public class CarMapper implements Mapper<Car, CarDto> {
+    private final PicturesMapper picturesMapper;
+    public CarMapper(PicturesMapper picturesMapper) {
+        this.picturesMapper = picturesMapper;
+    }
     @Override
     public CarDto fromEntityToDto(Car entity) {
         return CarDto.builder()
@@ -25,11 +26,9 @@ public class CarMapper implements Mapper<Car, CarDto> {
                 .pricePerDayInPolishGrosz(entity.getPricePedDayInPolishGrosz())
                 .available(entity.isAvailable())
                 .rangeInKm(entity.getRangeInKm())
-                .pictures( new PicturesDto(entity.getPictures().getMainPictureUrl(),entity.getPictures().getPicturesUrl()))
+                .pictures(picturesMapper.fromEntityToDto(entity.getPictures()))
                 .build();
-
     }
-
     @Override
     public Car fromDtoToEntity(CarDto dto) {
         return Car.builder()
@@ -46,7 +45,7 @@ public class CarMapper implements Mapper<Car, CarDto> {
                 .pricePedDayInPolishGrosz(dto.pricePerDayInPolishGrosz())
                 .available(dto.available())
                 .rangeInKm(dto.rangeInKm())
-                .pictures(new Pictures(dto.pictures().mainPictureUrl(), dto.pictures().picturesUrls()))
+                .pictures(picturesMapper.fromDtoToEntity(dto.pictures()))
                 .build();
     }
 }

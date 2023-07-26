@@ -2,6 +2,9 @@ package com.sda.rentalloapp.mapper;
 
 import com.sda.rentalloapp.domain.Pictures;
 import com.sda.rentalloapp.dto.PicturesDto;
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class PicturesMapper implements Mapper<Pictures, PicturesDto> {
 
