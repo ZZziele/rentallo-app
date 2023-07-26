@@ -29,4 +29,9 @@ public class CarService {
         log.debug("all cars: {}", cars);
         return cars;
     }
+
+    public Car findCarById(Long carId) {
+        //TODO
+        throw new RuntimeException("Not implemented yet");
+    }
 }
