@@ -28,7 +28,6 @@ public class CarRestControllerAdvisor {
                 .status(HttpStatus.NOT_FOUND.value())
                 .error("Not Found")
                 .message(exc.getMessage())
-                // TODO: get path
                 .path(path)
                 .build();
     }
