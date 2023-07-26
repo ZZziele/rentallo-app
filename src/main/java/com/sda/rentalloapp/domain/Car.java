@@ -4,6 +4,7 @@ import com.sda.rentalloapp.domain.enumeration.BodyType;
 import com.sda.rentalloapp.domain.enumeration.EngineType;
 import com.sda.rentalloapp.domain.enumeration.FuelType;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,11 +19,13 @@ import lombok.NoArgsConstructor;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(nullable = false)
     Long id;
 
+    @Column(nullable = false)
     String model;
 
+    @Column(nullable = false)
     String brand;
 
     @Enumerated(EnumType.STRING)
@@ -40,6 +43,7 @@ public class Car {
 
     String combustionPer100Km;
 
+    @Column(unique = true)
     String bodySerialNumber;
 
     int pricePedDayInPolishGrosz;
@@ -47,7 +51,8 @@ public class Car {
     boolean available;
 
     int rangeInKm;
-
+    @NotNull
+    @Column(nullable = false)
     Pictures pictures;
 
 }
