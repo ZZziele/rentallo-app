@@ -5,6 +5,7 @@ import com.sda.rentalloapp.domain.enumeration.EngineType;
 import com.sda.rentalloapp.domain.enumeration.FuelType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,9 +24,12 @@ public class Car {
     Long id;
 
     @Column(nullable = false)
+    @NotNull
+    @Size(min = 1)
     String model;
 
     @Column(nullable = false)
+    @Size(min = 1)
     String brand;
 
     @Enumerated(EnumType.STRING)
