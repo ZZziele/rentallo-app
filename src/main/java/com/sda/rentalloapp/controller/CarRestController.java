@@ -54,5 +54,12 @@ public class CarRestController {
         return ResponseEntity.created(uri).build();
     }
 
+    @DeleteMapping("/cars/{id}")
+    public ResponseEntity<Void> deleteCar(@PathVariable("id") Long carId ){
+        log.info("trying to delete car with id [{}]" ,carId);
+        carService.deleteCarById(carId);
+        return ResponseEntity.noContent().build();
+    }
+
 
 }

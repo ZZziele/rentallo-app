@@ -4,6 +4,7 @@ package com.sda.rentalloapp.service;
 import com.sda.rentalloapp.Exception.WrongCarIdException;
 import com.sda.rentalloapp.domain.Car;
 import com.sda.rentalloapp.repository.CarRepository;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -45,5 +46,16 @@ public class CarService {
         Car saved  = carRepository.save(car);
         log.info("saved car : [{}]",saved);
         return  saved;
+    }
+
+    @Transactional
+    public void deleteCarById(Long carId) {
+        log.info("delete car by id: [{}]",carId);
+        boolean exist = carRepository.existsById(carId);
+        if(exist){
+            carRepository.deleteById(carId);
+        }else {
+            throw new WrongCarIdException("Wrong id: " + carId);
+        }
     }
 }
