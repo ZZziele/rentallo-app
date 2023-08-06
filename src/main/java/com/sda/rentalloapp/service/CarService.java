@@ -40,4 +40,10 @@ public class CarService {
                  .orElseThrow(() -> new WrongCarIdException("No car with id: "+ carId));
 
     }
+
+    public Car addCar(Car car) {
+        Car saved  = carRepository.save(car);
+        log.info("saved car : [{}]",saved);
+        return  saved;
+    }
 }
