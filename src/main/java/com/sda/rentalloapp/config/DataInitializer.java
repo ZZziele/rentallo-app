@@ -33,7 +33,7 @@ public class DataInitializer implements CommandLineRunner {
         Car mazda = Car.
                 builder()
                 .model("mazda")
-                .brand("V")
+                .brand("VS")
                 .fuelType(FuelType.GAS)
                 .engineType(EngineType.V8)
                 .bodyType(BodyType.HATCHBACK)

@@ -15,7 +15,7 @@ public record CarDto(
         @Size(min = 1)
         String model,
         @NotNull
-        @Size(min = 1)
+        @Size(min = 2)
         String brand,
         FuelType fuelType,
         EngineType engineType,
