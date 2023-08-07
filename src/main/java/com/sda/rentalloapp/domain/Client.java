@@ -34,6 +34,10 @@ public class Client {
     Address address;
     LocalDateTime accountCreated;
 
+    @PrePersist
+    void setAccountCreated(){
+        accountCreated = LocalDateTime.now();
+    }
 
 
 
