@@ -1,4 +1,5 @@
 package com.sda.rentalloapp.dto;
+
 import com.sda.rentalloapp.domain.enumeration.BodyType;
 import com.sda.rentalloapp.domain.enumeration.EngineType;
 import com.sda.rentalloapp.domain.enumeration.FuelType;
@@ -17,6 +18,7 @@ public record CarDto(
         @NotNull
         @Size(min = 2)
         String brand,
+       // @JsonProperty("fuel_type")
         FuelType fuelType,
         EngineType engineType,
         BodyType bodyType,

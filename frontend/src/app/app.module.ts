@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './components/app/app.component';
 import { CarsComponent } from './compontnts/cars/cars.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,8 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CarsComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
