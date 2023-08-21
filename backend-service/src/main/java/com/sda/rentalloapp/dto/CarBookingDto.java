@@ -14,7 +14,7 @@ public record CarBookingDto(
 
         LocalDate endDate,
 
-        int totalPriceInPolishGrosz,
+        Long totalPriceInPolishGrosz,
 
         AddressDto startLocation,
         AddressDto endLocation,
