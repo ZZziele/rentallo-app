@@ -5,17 +5,16 @@ import java.time.LocalDateTime;
 
 public record CarBookingRequestDto(
 
-                                   Long  bookedCarId,
+        Long  bookedCarId,
 
-                                   Long  clientId,
-                                   LocalDate startDate,
+        Long  clientId,
+        LocalDate startDate,
 
-                                   LocalDate endDate,
+        LocalDate endDate,
+        Long startLocationId,
+        Long endLocationId,
 
-                                   Long startLocationId,
-                                   Long endLocationId,
+        LocalDateTime creationTimestamp,
 
-                                   LocalDateTime creationTimestamp,
-
-                                   LocalDateTime updateTimestamp) {
+        LocalDateTime updateTimestamp) {
 }
