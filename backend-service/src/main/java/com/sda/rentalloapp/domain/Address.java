@@ -18,12 +18,9 @@ public class Address {
     Long id;
     String street;
     String zipCode;
-
     String city;
     String houseNumber;
-
     String Country;
-
     String voivodeship;
 
 
