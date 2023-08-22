@@ -13,7 +13,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { AboutComponent } from './components/about/about.component';
 import { RentsHistoryComponent } from './components/rents-history/rents-history.component';
 import {RouterModule} from "@angular/router";
-import {aboutUrl, carsUrl, clientsUrl, homePageUrl, notFoundPageUrl, rentsHistory} from "./models/urls";
+import {aboutUrl, carsUrl, clientsUrl, homePageUrl, notFoundPageUrl, rentsHistoryUrl} from "./models/urls";
 import { HomeComponent } from './components/home/home.component';
 import {A} from "@angular/cdk/keycodes";
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -38,7 +38,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MatButtonToggleModule,
     RouterModule.forRoot([
       {path: homePageUrl, component: HomeComponent},
-      {path: rentsHistory, component: RentsHistoryComponent},
+      {path: rentsHistoryUrl, component: RentsHistoryComponent},
       {path: carsUrl, component: CarsComponent},
       {path: clientsUrl, component: ClientsComponent},
       {path: aboutUrl, component: AboutComponent},
