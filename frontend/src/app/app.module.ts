@@ -10,6 +10,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { ClientsComponent } from './components/clients/clients.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ClientsComponent } from './components/clients/clients.component';
     CarsComponent,
     TopBarComponent,
     NavigationBarComponent,
-    ClientsComponent
+    ClientsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
