@@ -17,6 +17,7 @@ import {aboutUrl, carsUrl, clientsUrl, homePageUrl, notFoundPageUrl, rentsHistor
 import { HomeComponent } from './components/home/home.component';
 import {A} from "@angular/cdk/keycodes";
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
+    MatIconModule,
     MatButtonToggleModule,
     RouterModule.forRoot([
       {path: homePageUrl, component: HomeComponent},
