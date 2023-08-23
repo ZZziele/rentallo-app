@@ -18,6 +18,9 @@ import { HomeComponent } from './components/home/home.component';
 import {A} from "@angular/cdk/keycodes";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
+import {MatInputModule} from "@angular/material/input";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import {MatIconModule} from "@angular/material/icon";
       {path: aboutUrl, component: AboutComponent},
       {path: notFoundPageUrl, component: NotFoundComponent}
 
-    ])
+    ]),
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
