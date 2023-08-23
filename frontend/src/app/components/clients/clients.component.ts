@@ -24,6 +24,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
     this.clientService.getClients()
       .subscribe(clients => {
         console.log(`Clients from server: ${JSON.stringify(clients, null, 2)}`)
+        this.dataSource.data = clients;
       })
   }
   ngAfterViewInit(): void {
