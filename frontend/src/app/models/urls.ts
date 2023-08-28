@@ -3,6 +3,7 @@ const serverUrl = 'http://localhost:8080'
 export const allCarsUrl = `${serverUrl}/api/cars`
 
 export const allClientsUrl = `${serverUrl}/api/clients`
+export const createCarUrl = `${serverUrl}/api/cars`
 // internal links
 export const homePageUrl = ''
 export const rentsHistoryUrl = 'rents-history'
