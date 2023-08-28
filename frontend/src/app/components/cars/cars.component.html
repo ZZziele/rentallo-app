@@ -1,3 +1,11 @@
+<div>
+  <div>
+    <h2>Create new car</h2>
+    <form [formGroup]="carForm">
+      <label for="model">Model:</label>
+      <input id="model" [formControl]="model" type="text">
+    </form>
+  </div>
 <div *ngFor="let car of cars">
   <mat-card class="example-card">
     <mat-card-header>
@@ -22,4 +30,5 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
+</div>
 </div>
