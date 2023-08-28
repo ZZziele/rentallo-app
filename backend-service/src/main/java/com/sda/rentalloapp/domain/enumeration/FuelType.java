@@ -1,21 +1,15 @@
 package com.sda.rentalloapp.domain.enumeration;
-
 public enum FuelType {
-    GAS("gas fuel") ,
-    OIL("oil fuel"),
-    GASOLINE("gasoline fuel"),
-    ELECTRIC("electricity"),
-    HYBRID ("hybrid");
-
-
-
+    GAS("Gas fuel"),
+    OIL("Oil fuel"),
+    GASOLINE("Gasoline fuel"),
+    ELECTRIC("Electricity"),
+    HYBRID("Hybrid");
     FuelType(String fuelDesc) {
-        this.fueltDesc = fuelDesc;
+        this.fuelDesc = fuelDesc;
     }
-
-    String fueltDesc;
-
-    public String getFueltDesc() {
-        return fueltDesc;
+    public String fuelDescription() {
+        return fuelDesc;
     }
+    private String fuelDesc;
 }
