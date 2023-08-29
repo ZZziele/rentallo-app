@@ -3,16 +3,10 @@
     <p>Form value: {{ value | json }}</p>
     <h2>Create new car</h2>
     <form [formGroup]="carForm" (ngSubmit)="sendCar()">
-
-      <label for="model">Model:</label>
-      <input id="id" [formControl]="id"  type="hidden"><br/>
-
       <label for="model">Model:</label>
       <input id="model" [formControl]="model" type="text"><br/>
-
       <label for="brand">Brand</label>
       <input id="brand" type="text" [formControl]="brand"><br/>
-
       <label for="fuelType">Fuel type</label>
       <input id="fuelType" type="text" [formControl]="fuelType"><br/>
       <label for="engineType">Engine type</label>
@@ -35,7 +29,7 @@
       <input id="rangeInKm" type="number" [formControl]="rangeInKm"><br/>
       <!--      TODO-->
       <label for="rangeInKm">Pictures</label>
-      <button type="submit" mat-raised-button>Create</button>
+      <button #submitButton type="submit"  mat-raised-button>Create</button>
       <button type="reset" mat-raised-button>Reset</button>
     </form>
   </div>
